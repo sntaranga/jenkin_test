@@ -30,5 +30,5 @@ pipeline {
 }
 def mystep(String name){
 	println 'hellow $name'
-	sleep(60) 
+	sleep(20) 
 }
