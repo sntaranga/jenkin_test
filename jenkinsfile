@@ -10,10 +10,10 @@ pipeline {
             
             stages {
                 stage('Checkout') {
-                    
+                    steps { mystep('checkout')}
                 }
                 stage('Maven build') {
-                    
+                    steps { mystep('build') }
                 }
             }
             post { always { cleanWs() } } 
@@ -24,4 +24,7 @@ pipeline {
             post { always { cleanWs() } }
         }
     }
+}
+def mystep(String name){
+	println 'hellow $name'
 }
