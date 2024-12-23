@@ -1,1 +1,27 @@
+pipeline {
+    agent any
 
+	options {
+        skipDefaultCheckout()
+    }
+
+    stages {
+        stage('Checkout and maven build') {
+            
+            stages {
+                stage('Checkout') {
+                    
+                }
+                stage('Maven build') {
+                    
+                }
+            }
+            post { always { cleanWs() } } 
+        }
+        stage('Docker build and publish') {
+            agent any
+            steps { }
+            post { always { cleanWs() } }
+        }
+    }
+}
