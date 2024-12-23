@@ -15,6 +15,9 @@ pipeline {
                 stage('Maven build') {
                     steps { mystep('build') }
                 }
+                stage('thin build') {
+                    steps { mystep('thin build') }
+                }
             }
             post { always { cleanWs() } } 
         }
