@@ -27,4 +27,5 @@ pipeline {
 }
 def mystep(String name){
 	println 'hellow $name'
+	sleep(10000)
 }
