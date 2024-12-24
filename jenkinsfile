@@ -54,5 +54,7 @@ pipeline {
 
 def mystep(String name) {
     println "Hello $name"
-    sleep(60)
+    def random = new Random()
+    def randomInRange = 5 + random.nextInt(51)
+    sleep($randomInRange)
 }
