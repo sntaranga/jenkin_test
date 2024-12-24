@@ -57,6 +57,25 @@ pipeline {
                          }
                    }
                 }
+                stage('p2'){
+                   stages {
+                         stage('p2s1'){
+                              steps {
+                                 script {
+                                    mystep('build-p2s1')
+                                 }
+                              } 
+                         }
+                         stage('p1s2'){
+                              steps {
+                                 script {
+                                    mystep('build-p2s2')
+                                 }
+                              } 
+                         }
+                   }                    
+                }
+
              }
         }
         
