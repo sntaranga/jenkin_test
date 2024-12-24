@@ -21,9 +21,9 @@ pipeline {
             }
             post { always { cleanWs() } } 
         }
-        stage {
+        stage('parallel stage') {
         parallel {
-               stages('p1') {
+               stages {
                      stage('p1s1') {
                           steps('p1s1')
                      }
@@ -31,7 +31,7 @@ pipeline {
                           steps('p1s2')
                      }
                }
-               stages('p2') {
+               stages {
                      stage('p2s1') {
                           steps('p2s1')
                      }
