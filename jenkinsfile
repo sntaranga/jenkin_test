@@ -55,6 +55,8 @@ pipeline {
 def mystep(String name) {
     println "Hello $name"
     def random = new Random()
-    def randomInRange = 5 + random.nextInt(51)
-    sleep($randomInRange)
+    def randomInt = (Math.random() * 100).toInteger() // Random integer between 0 and 99
+    println "Random Integer using Math.random: $randomInt"
+
+    sleep(10)
 }
