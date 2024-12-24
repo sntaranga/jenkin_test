@@ -1,3 +1,6 @@
+#!groovy
+init()
+
 pipeline {
     agent any
 
@@ -114,4 +117,14 @@ def mystep(String name) {
     println "Random Integer using Math.random: $randomInt"
 
     sleep(randomInt)
+}
+def init{	
+		properties([
+        disableConcurrentBuilds(),
+        parameters([
+            booleanParam(name: 'boolparam', defaultValue: false, description: 'test param1'),
+            stringParam(name: 'stringparam', defaultValue: '', 
+            description: 'testparam2')
+        ])
+    ])
 }
