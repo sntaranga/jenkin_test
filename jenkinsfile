@@ -37,7 +37,7 @@ pipeline {
             }
         }
         stage('Parallel Stage') {
-
+            steps {
                 stage('Group 1') {
                     parallel {
                         stage('P1S1') {
@@ -56,6 +56,8 @@ pipeline {
                         }
                     }
                 }
+             }
+             steps {
                 stage('Group 2') {
                     parallel {
                         stage('P2S1') {
@@ -74,7 +76,7 @@ pipeline {
                         }
                     }
                 }
-            
+            }
         }
         stage('Docker Build and Publish') {
             steps {
