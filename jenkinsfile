@@ -21,8 +21,9 @@ pipeline {
             }
             post { always { cleanWs() } } 
         }
+        stage {
         parallel {
-               stage('p1') {
+               stages('p1') {
                      stage('p1s1') {
                           steps('p1s1')
                      }
@@ -30,7 +31,7 @@ pipeline {
                           steps('p1s2')
                      }
                }
-               stage('p2') {
+               stages('p2') {
                      stage('p2s1') {
                           steps('p2s1')
                      }
@@ -38,6 +39,7 @@ pipeline {
                           steps('p2s2')
                      }
                }
+        }
         }
         stage('Docker build and publish') {
             agent any
