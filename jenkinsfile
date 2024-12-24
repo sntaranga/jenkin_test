@@ -118,7 +118,7 @@ def mystep(String name) {
 
     sleep(randomInt)
 }
-def init{	
+def init(){	
 		properties([
         disableConcurrentBuilds(),
         parameters([
