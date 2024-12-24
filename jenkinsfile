@@ -55,6 +55,21 @@ pipeline {
                                  }
                               } 
                          }
+                         stage('p1s3'){
+                             parallel {
+                                stage('pp1') {
+                                    stages{
+                                        stage(pp1s1){
+                                          steps {
+                                            script {
+                                             mystep('build-p1s2')
+                                            }
+                                          } 
+                                        }
+                                    }
+                                }
+                             }
+                         }
                    }
                 }
                 stage('p2'){
