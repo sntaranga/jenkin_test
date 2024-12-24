@@ -53,6 +53,6 @@ pipeline {
 }
 
 def mystep(String name) {
-    println "Hello ${name}"
-    sleep(20)
+    println "Hello $name"
+    sleep(60)
 }
