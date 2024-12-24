@@ -1,54 +1,97 @@
 pipeline {
     agent any
 
-	options {
+    options {
         skipDefaultCheckout()
     }
 
     stages {
-        stage('Checkout and maven build') {
-            
+        stage('Checkout and Maven Build') {
             stages {
-                stage('thinuja.com') {
-                    steps { mystep('checkout')}
+                stage('Checkout') {
+                    steps {
+                        script {
+                            mystep('checkout')
+                        }
+                    }
                 }
-                stage('Maven build') {
-                    steps { mystep('build') }
+                stage('Maven Build') {
+                    steps {
+                        script {
+                            mystep('build')
+                        }
+                    }
                 }
-                stage('thin build') {
-                    steps { mystep('thin build') }
+                stage('Thin Build') {
+                    steps {
+                        script {
+                            mystep('thin build')
+                        }
+                    }
                 }
             }
-            post { always { cleanWs() } } 
+            post {
+                always {
+                    cleanWs()
+                }
+            }
         }
-        stage('parallel stage') {
-        parallel {
-               stages {
-                     stage('p1s1') {
-                          steps('p1s1')
-                     }
-                     stage('p1s2') {
-                          steps('p1s2')
-                     }
-               }
-               stages {
-                     stage('p2s1') {
-                          steps('p2s1')
-                     }
-                     stage('p2s2') {
-                          steps('p2s2')
-                     }
-               }
+        stage('Parallel Stage') {
+            parallel {
+                stage('Group 1') {
+                    parallel {
+                        stage('P1S1') {
+                            steps {
+                                script {
+                                    mystep('p1s1')
+                                }
+                            }
+                        }
+                        stage('P1S2') {
+                            steps {
+                                script {
+                                    mystep('p1s2')
+                                }
+                            }
+                        }
+                    }
+                }
+                stage('Group 2') {
+                    parallel {
+                        stage('P2S1') {
+                            steps {
+                                script {
+                                    mystep('p2s1')
+                                }
+                            }
+                        }
+                        stage('P2S2') {
+                            steps {
+                                script {
+                                    mystep('p2s2')
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
-        }
-        stage('Docker build and publish') {
-            agent any
-            steps { mystep('B A P') }
-            post { always { cleanWs() } }
+        stage('Docker Build and Publish') {
+            steps {
+                script {
+                    mystep('B A P')
+                }
+            }
+            post {
+                always {
+                    cleanWs()
+                }
+            }
         }
     }
 }
-def mystep(String name){
-	println 'hellow $name'
-	sleep(20) 
+
+def mystep(String name) {
+    println "Hello ${name}"
+    sleep(20)
 }
