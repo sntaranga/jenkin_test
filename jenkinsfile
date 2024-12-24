@@ -36,48 +36,7 @@ pipeline {
                 }
             }
         }
-        stage('Parallel Stage') {
-            steps {
-                stage('Group 1') {
-                    parallel {
-                        stage('P1S1') {
-                            steps {
-                                script {
-                                    mystep('p1s1')
-                                }
-                            }
-                        }
-                        stage('P1S2') {
-                            steps {
-                                script {
-                                    mystep('p1s2')
-                                }
-                            }
-                        }
-                    }
-                }
-             }
-             steps {
-                stage('Group 2') {
-                    parallel {
-                        stage('P2S1') {
-                            steps {
-                                script {
-                                    mystep('p2s1')
-                                }
-                            }
-                        }
-                        stage('P2S2') {
-                            steps {
-                                script {
-                                    mystep('p2s2')
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        
         stage('Docker Build and Publish') {
             steps {
                 script {
