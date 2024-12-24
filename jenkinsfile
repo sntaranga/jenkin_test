@@ -37,7 +37,9 @@ pipeline {
             }
         }
         stage('parallel build') {
+          
              parallel {
+                stage('p1'){
                    stages {
                          stage('p1s1'){
                               steps {
@@ -47,6 +49,7 @@ pipeline {
                               } 
                          }
                    }
+                }
              }
         }
         
