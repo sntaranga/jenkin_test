@@ -9,7 +9,7 @@ pipeline {
         stage('Checkout and maven build') {
             
             stages {
-                stage('Checkout') {
+                stage('thinuja.com') {
                     steps { mystep('checkout')}
                 }
                 stage('Maven build') {
