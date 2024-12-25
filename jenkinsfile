@@ -136,9 +136,11 @@ def init(){
 }
 def myappcheckout(){
     print env
+    sh "mkdir git;cd git"
     checkout scm
 }
 def myls(){
    sh "pwd"
    sh "ls -ltr"
 }
+
