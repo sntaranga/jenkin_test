@@ -10,6 +10,10 @@ pipeline {
 
     stages {
         stage('Checkout and Maven Build') {
+    	    options {
+        		skipDefaultCheckout()
+    	    }
+
             stages {
                 stage('Checkout') {
                     steps {
