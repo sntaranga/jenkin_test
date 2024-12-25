@@ -1,5 +1,5 @@
 #!groovy
-init()
+#init()
 
 pipeline {
     agent any
@@ -126,7 +126,7 @@ def mystep(String name) {
 }
 def init(){	
 		properties([
-#        disableConcurrentBuilds(),
+        disableConcurrentBuilds(),
         parameters([
             booleanParam(name: 'boolparam', defaultValue: false, description: 'test param1'),
             stringParam(name: 'stringparam', defaultValue: '', 
