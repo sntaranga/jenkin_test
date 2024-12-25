@@ -28,6 +28,7 @@ pipeline {
                         script {
                             mystep('build')
                         }
+                        myls()
                     }
                 }
                 stage('Thin Build') {
@@ -136,4 +137,8 @@ def init(){
 def myappcheckout(){
     print env
     checkout scm
+}
+def myls(){
+   sh "pwd"
+   sh "ls -ltr"
 }
