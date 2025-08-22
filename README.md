@@ -36,3 +36,5 @@ Note: I added a sleep command in Jenkins file to see how the flow happened
 This is a simple template for CI/CD implementation using Jenkins and this can be used for a starting point for  your production-grade deployments.
 
 ![Blue Ocean view of the pipeline](jenkins.png)
+
+# Try It yourself. It is easy
