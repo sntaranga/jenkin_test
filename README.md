@@ -37,4 +37,6 @@ This is a simple template for CI/CD implementation using Jenkins and this can be
 
 ![Blue Ocean view of the pipeline](jenkins.png)
 
+**If  gitlab is used, use AccessToken for password.**
+
 # Try It yourself. It is easy
