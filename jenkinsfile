@@ -18,7 +18,7 @@ pipeline {
                 stage('Checkout') {
                     steps {
                         script {
-                            mystep('tutu')
+                            mystep('hello Check Point 1')
                         }
                         myappcheckout()
                     }
@@ -26,7 +26,7 @@ pipeline {
                 stage('Maven Build') {
                     steps {
                         script {
-                            mystep('build')
+                            mystep('hello Check Point 2')
                         }
                         myls()
                     }
@@ -34,7 +34,7 @@ pipeline {
                 stage('Thin Build') {
                     steps {
                         script {
-                            mystep('thin build')
+                            mystep('hello Check Point 3')
                         }
                     }
                 }
