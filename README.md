@@ -33,3 +33,4 @@ Select Newproject -> Multibranch Pipeline
 
 Note: I added a sleep command in Jenkins file to see how the flow happened
 
+This is a simple template for CI/CD implementation using Jenkins and this can be used for a starting point for  your production-grade deployments.
