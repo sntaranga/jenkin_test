@@ -22,6 +22,9 @@ docker exec -it  jenkins  cat /var/jenkins_home/secrets/initialAdminPassword
 ```
 Follow the Screens until installation is completed. ( default is fine )
 
+## First cicd project
+
+Select Newproject -> Multibranch Pipeline
 
 
 
