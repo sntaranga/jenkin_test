@@ -31,5 +31,5 @@ Select Newproject -> Multibranch Pipeline
 
 **Please make sure you have the correct filename in the Script Path field of the Build Configuration. Unless very hard to notice it.**
 
-
+Note: I added a sleep command in Jenkins file to see how the flow happened
 
