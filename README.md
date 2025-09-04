@@ -40,3 +40,12 @@ This is a simple template for CI/CD implementation using Jenkins and this can be
 **If  gitlab is used, use AccessToken for password.**
 
 # Try It yourself. It is easy
+
+
+## Disclaimer of Liability
+
+The information, materials, and work provided in connection with this project are delivered “as is” and without warranties of any kind, either express or implied. The author/contractor assumes no responsibility or liability for any errors, omissions, or outcomes resulting from the use of this project.
+
+By using or implementing any part of this project, you agree that the author/contractor shall not be held liable for any direct, indirect, incidental, consequential, or special damages, including but not limited to loss of data, business interruption, or financial loss, arising out of or in connection with the use of this project.
+
+It is the responsibility of the user or organization to review, test, and validate all outputs and ensure compliance with applicable laws, regulations, and standards before implementation.
